@@ -14,9 +14,8 @@ func Equal(a, b []int) bool {
 	return true
 }
 
-// Min returns the smallest value in an int slice.
-// The runtime will panic if slice is empty; therefore, the user should ensure the slice is populated
-func Min(a []int) int {
+// Min returns the smallest value passed-in
+func MinInt(a ...int) int {
 	m := a[0]
 	for _, v := range a {
 		if v < m {
@@ -26,9 +25,8 @@ func Min(a []int) int {
 	return m
 }
 
-// Max returns the smallest value in an int slice.
-// The runtime will panic if slice is empty; therefore, the user should ensure the slice is populated
-func Max(a []int) int {
+// Max returns the largest value passed-in
+func MaxInt(a ...int) int {
 	m := a[0]
 	for _, v := range a {
 		if v > m {
