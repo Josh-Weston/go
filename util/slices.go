@@ -14,28 +14,6 @@ func Equal(a, b []int) bool {
 	return true
 }
 
-// Min returns the smallest value passed-in
-func MinInt(a ...int) int {
-	m := a[0]
-	for _, v := range a {
-		if v < m {
-			m = v
-		}
-	}
-	return m
-}
-
-// Max returns the largest value passed-in
-func MaxInt(a ...int) int {
-	m := a[0]
-	for _, v := range a {
-		if v > m {
-			m = v
-		}
-	}
-	return m
-}
-
 // Extent returns the min and max values in an int slice
 // The runtime will panic if slice is empty; therefore, the user should ensure the slice is populated
 func Extent(a []int) (int, int) {
